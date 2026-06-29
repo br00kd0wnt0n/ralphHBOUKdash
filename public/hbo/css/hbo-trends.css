@@ -122,6 +122,12 @@ body {
     flex-shrink: 0;
 }
 
+.hbo-max-logoimg {
+    height: 28px;
+    width: auto;
+    display: block;
+}
+
 .nav-brand-divider {
     width: 1px;
     height: 28px;
