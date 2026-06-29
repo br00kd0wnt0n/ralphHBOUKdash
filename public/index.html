@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Culture Engine - Sky x Ralph</title>
-    <link rel="stylesheet" href="css/sky-trends.css">
+    <title>Culture Engine - HBO x Ralph</title>
+    <link rel="stylesheet" href="css/hbo-trends.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -15,10 +15,13 @@
     <nav class="nav">
         <div class="nav-inner">
             <div class="nav-brand">
-                <img src="surveylogo.png" alt="Ralph" class="nav-logo">
+                <div class="hbo-logo-lockup">
+                    <img src="img/hbo-max-logo.png" alt="HBO Max" class="hbo-max-logoimg">
+                </div>
+                <div class="nav-brand-divider"></div>
                 <div class="nav-brand-text">
                     <span class="nav-title">Culture Engine</span>
-                    <span class="nav-subtitle">Sky x Ralph</span>
+                    <span class="nav-subtitle">HBO x Ralph</span>
                 </div>
             </div>
             <div class="nav-links">
@@ -29,7 +32,7 @@
                     <i class="fas fa-chart-line"></i> Streaming Charts
                 </a>
                 <a href="#" class="nav-link" data-section="opportunities">
-                    <i class="fas fa-lightbulb"></i> Sky Opportunities
+                    <i class="fas fa-lightbulb"></i> HBO Opportunities
                 </a>
                 <a href="#" class="nav-link" data-section="social">
                     <i class="fas fa-hashtag"></i> Social &amp; Culture
@@ -37,16 +40,16 @@
                 <a href="#" class="nav-link" data-section="calendar">
                     <i class="fas fa-calendar-alt"></i> Calendar
                 </a>
-                <a href="#" class="nav-link" data-section="skyperformance">
-                    <i class="fas fa-trophy"></i> Sky Performance
+                <a href="#" class="nav-link" data-section="hboperformance">
+                    <i class="fas fa-trophy"></i> HBO Performance
                 </a>
             </div>
             <div class="nav-actions">
                 <div class="dataset-toggle" title="Switch dataset">
                     <i class="fas fa-database"></i>
                     <select id="datasetToggle">
-                        <option value="new" selected>This week (13–19 Apr)</option>
-                        <option value="prev">Previous (17–23 Feb)</option>
+                        <option value="new" selected>This week (22–28 Jun)</option>
+                        <option value="prev">Previous (15–21 Jun)</option>
                     </select>
                 </div>
                 <button class="btn-refresh" id="refreshBtn" title="Refresh data">
@@ -65,7 +68,7 @@
             <!-- Hero Stats -->
             <div class="stats-row">
                 <div class="stat-card">
-                    <div class="stat-icon stat-icon-blue">
+                    <div class="stat-icon stat-icon-primary">
                         <i class="fas fa-film"></i>
                     </div>
                     <div class="stat-content">
@@ -74,7 +77,7 @@
                     </div>
                 </div>
                 <div class="stat-card">
-                    <div class="stat-icon stat-icon-navy">
+                    <div class="stat-icon stat-icon-dark">
                         <i class="fas fa-tv"></i>
                     </div>
                     <div class="stat-content">
@@ -83,12 +86,12 @@
                     </div>
                 </div>
                 <div class="stat-card">
-                    <div class="stat-icon stat-icon-pink">
+                    <div class="stat-icon stat-icon-mid">
                         <i class="fas fa-wand-magic-sparkles"></i>
                     </div>
                     <div class="stat-content">
                         <span class="stat-number" id="stat-opportunities">12</span>
-                        <span class="stat-label">Sky Opportunities</span>
+                        <span class="stat-label">HBO Opportunities</span>
                     </div>
                 </div>
                 <div class="stat-card">
@@ -121,7 +124,7 @@
                 </div>
             </div>
 
-            <!-- Two Column: Top Movers + Sky Spotlight -->
+            <!-- Two Column: Top Movers + HBO Spotlight -->
             <div class="grid-2">
                 <!-- Top Movers -->
                 <div class="card">
@@ -136,12 +139,12 @@
                     </div>
                 </div>
 
-                <!-- Sky Opportunity Spotlight -->
+                <!-- HBO Opportunity Spotlight -->
                 <div class="card card-spotlight">
-                    <div class="card-header card-header-sky">
+                    <div class="card-header card-header-hbo">
                         <div class="card-header-left">
                             <i class="fas fa-star"></i>
-                            <h2>Sky Opportunity Spotlight</h2>
+                            <h2>HBO Opportunity Spotlight</h2>
                         </div>
                         <span class="card-header-badge badge-urgent">Act Now</span>
                     </div>
@@ -191,6 +194,9 @@
                 <button class="tab" data-platform="amazon">
                     <span class="platform-dot dot-amazon"></span> Prime Video
                 </button>
+                <button class="tab" data-platform="hbomax">
+                    <span class="platform-dot dot-hbo"></span> HBO Max
+                </button>
             </div>
 
             <!-- Filter Row -->
@@ -217,13 +223,13 @@
             </div>
         </section>
 
-        <!-- ==================== SKY OPPORTUNITIES SECTION ==================== -->
+        <!-- ==================== HBO OPPORTUNITIES SECTION ==================== -->
         <section id="section-opportunities" class="section">
             <!-- Opportunities Header -->
             <div class="opportunities-header">
                 <div class="opportunities-header-text">
-                    <h1>Sky Content Opportunities</h1>
-                    <p>What's trending right now and how Sky can get involved. Updated weekly.</p>
+                    <h1>HBO Content Opportunities</h1>
+                    <p>What's trending right now and how HBO can get involved. Updated weekly.</p>
                 </div>
                 <div class="opportunities-filters">
                     <select id="urgencyFilter" class="select-filter">
@@ -260,7 +266,7 @@
             <p style="font-size:0.82rem;color:var(--text-muted);margin-bottom:12px;">Wikipedia page views as a proxy for cultural attention. What people are actively researching right now.</p>
             <div class="grid-3" style="margin-bottom:24px;">
                 <div class="card">
-                    <div class="card-header" style="background:#636e72;border-bottom:none;">
+                    <div class="card-header" style="background:#1a1a1a;border-bottom:none;">
                         <div class="card-header-left">
                             <i class="fas fa-film" style="color:#fff"></i>
                             <h2 style="color:#fff">Film</h2>
@@ -270,7 +276,7 @@
                     <div class="card-body" id="wikiFilmWidget"><!-- JS --></div>
                 </div>
                 <div class="card">
-                    <div class="card-header" style="background:#636e72;border-bottom:none;">
+                    <div class="card-header" style="background:#1a1a1a;border-bottom:none;">
                         <div class="card-header-left">
                             <i class="fas fa-tv" style="color:#fff"></i>
                             <h2 style="color:#fff">TV</h2>
@@ -280,7 +286,7 @@
                     <div class="card-body" id="wikiTVWidget"><!-- JS --></div>
                 </div>
                 <div class="card">
-                    <div class="card-header" style="background:#636e72;border-bottom:none;">
+                    <div class="card-header" style="background:#1a1a1a;border-bottom:none;">
                         <div class="card-header-left">
                             <i class="fas fa-user-group" style="color:#fff"></i>
                             <h2 style="color:#fff">People</h2>
@@ -368,7 +374,7 @@
 
             <!-- Upcoming UK Movie Releases -->
             <div class="card" style="margin-bottom:24px;">
-                <div class="card-header card-header-sky">
+                <div class="card-header card-header-hbo">
                     <div class="card-header-left">
                         <i class="fas fa-clapperboard" style="color:#fff"></i>
                         <h2 style="color:#fff">Upcoming UK Cinema Releases</h2>
@@ -406,10 +412,10 @@
             </div>
         </section>
 
-        <!-- ==================== SKY PERFORMANCE SECTION ==================== -->
-        <section id="section-skyperformance" class="section">
+        <!-- ==================== HBO PERFORMANCE SECTION ==================== -->
+        <section id="section-hboperformance" class="section">
             <div class="social-header">
-                <h1>Sky Social Performance</h1>
+                <h1>HBO Social Performance</h1>
                 <p>Our best-performing posts this week - what's landing with fans. Data via YouScan. Currently showing demo data.</p>
             </div>
 
@@ -417,11 +423,11 @@
                 <div class="card-header card-header-gradient">
                     <div class="card-header-left">
                         <i class="fas fa-chart-line" style="color:#fff"></i>
-                        <h2 style="color:#fff">Top Performing Sky Posts</h2>
+                        <h2 style="color:#fff">Top Performing HBO Posts</h2>
                     </div>
                     <span class="card-header-badge">Past Week</span>
                 </div>
-                <div class="card-body" id="skyPostsWidget"><!-- JS --></div>
+                <div class="card-body" id="hboPostsWidget"><!-- JS --></div>
             </div>
         </section>
 
@@ -431,11 +437,13 @@
     <footer class="footer">
         <div class="footer-inner">
             <div class="footer-left">
-                <img src="surveylogo.png" alt="Ralph" class="footer-logo">
+                <svg width="48" height="24" viewBox="0 0 48 24" xmlns="http://www.w3.org/2000/svg">
+                    <text x="0" y="16" font-family="Georgia, serif" font-weight="700" font-size="16" fill="#888">HBO</text>
+                </svg>
                 <span>Culture Engine v2.0</span>
             </div>
             <div class="footer-right">
-                <span>Prototype &mdash; Sky x Ralph Writers Room</span>
+                <span>Prototype &mdash; HBO x Ralph Writers Room</span>
             </div>
         </div>
     </footer>
@@ -443,7 +451,8 @@
     <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
     <script src="js/mock-data-prev.js"></script>
     <script src="js/mock-data.js"></script>
-    <script src="js/sky-trends.js"></script>
+    <script src="js/hbo-overrides.js"></script>
+    <script src="js/hbo-trends.js"></script>
     <script src="js/data-toggle.js"></script>
 </body>
 </html>

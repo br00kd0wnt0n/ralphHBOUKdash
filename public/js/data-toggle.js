@@ -1,6 +1,7 @@
 /* ============================================================
-   Dataset toggle - swap MOCK_DATA between MOCK_DATA_NEW and
-   MOCK_DATA_PREV and re-render every widget.
+   HBO Edition - Dataset toggle
+   Swaps MOCK_DATA between MOCK_DATA_NEW and MOCK_DATA_PREV
+   and re-renders every widget.
    ============================================================ */
 (function () {
     function rerender() {
@@ -18,7 +19,7 @@
         }
         if (typeof renderSocialSection === 'function') renderSocialSection();
         if (typeof renderCalendarSection === 'function') renderCalendarSection();
-        if (typeof renderSkyPerformance === 'function') renderSkyPerformance();
+        if (typeof renderHBOPerformance === 'function') renderHBOPerformance();
     }
 
     function attach() {
